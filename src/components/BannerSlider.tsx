@@ -57,11 +57,11 @@ export default function BannerSlider({ videos }: { videos: Video[] }) {
                         {/* Conteúdo por cima, 100% visível */}
                         <div className="absolute top-0 left-0 z-10 text-white px-8 py-12 w-full md:w-[70%] drop-shadow-xl">
                             <p className="text-sm md:text-xl font-medium">{video.category.title}</p>
-                            <p className="text-2xl md:text-5xl font-bold mt-8">{video.title}</p>
-                            <p className="text-sm md:text-base mt-8 font-light">{video.description}</p>
+                            <p className="text-2xl md:text-3xl font-bold mt-12">{video.title}</p>
+                            <p className="text-sm md:text-base mt-10 font-light">{video.description}</p>
 
                             <button
-                                className="startVideo mt-6 md:mt-12 w-full md:w-auto text-white font-semibold py-2 px-6 rounded transition"
+                                className="startVideo mt-20 md:mt-20 w-full md:w-auto text-white font-semibold py-2 px-6 rounded transition"
                                 onClick={() => router.push(`/video/${video.id}`)}
                             >
                                 ▶ Reproduzir agora
