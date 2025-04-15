@@ -1,4 +1,4 @@
-// components/Banner.tsx
+// components/VideoLikeike.tsx
 'use client'
 
 import { motion } from 'framer-motion'

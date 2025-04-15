@@ -12,6 +12,8 @@ import api from '@/utils/api'
 import VideoPlayer from '@/components/VideoPlayer'
 import VideoCarouselRelation from '@/components/VideoCarouselRelation';
 import { format } from 'date-fns'
+import VideoLikeButton from '@/components/VideoLikeButton'
+import AudioPlayer from '@/components/AudioPlayer';
 
 export default function VideoRelationPage() {
     const { id } = useParams()
@@ -41,7 +43,7 @@ export default function VideoRelationPage() {
             const response = await api.patch(`/video/${id}`, {
                 like: true,
             })
-            setVideo(response.data) // Atualiza o estado do vídeo com os novos likes
+            setVideo(response.data)
         } catch (error) {
             console.error('Erro ao curtir o vídeo:', error)
         }
@@ -76,29 +78,38 @@ export default function VideoRelationPage() {
                 </div>
             </div>
 
-            <div className="w-[80%] mt-8 mx-auto">
+            <div className="w-[95%] md:w-[75%] mt-8 mx-auto">
                 <div >
                     <h1 className="text-2xl font-bold mb-4">{video.title}</h1>
                 </div>
 
-                <div className="flex items-center justify-between px-4">
-                    <div className="flex items-center gap-2">
-                        <span className="text-sm font-light text-gray-300 mb-4 px-4 rounded-full bg-[#222] p-2">{video.category.title}</span>
-                        <span className="text-md font-light text-gray-300 mb-4 ml-2">{format(new Date(video.created_at), 'dd/MM/yyyy')}</span>
-                        <span className="text-md font-semibold mb-4 ml-4 flex items-center"><MdOutlineBookmarkAdd className="icon text-2xl mr-2" />Adicionar a minha lista</span>
+                <div className="flex flex-wrap items-center justify-between px-4 gap-y-2">
+                    <div className="flex flex-wrap items-center gap-x-2 text-xs sm:text-sm">
+                        <span className="px-3 py-1 rounded-full bg-[#222] text-gray-300">{video.category.title}</span>
+                        <span className="text-gray-300">{format(new Date(video.created_at), 'dd/MM/yyyy')}</span>
+                        <span className="font-semibold flex items-center"><MdOutlineBookmarkAdd className="text-xl mr-1" />Adicionar a minha lista</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                        <span className="text-sm font-light text-gray-400 mb-4 mr-4 opacity-70">{video.views} visualizações</span>
-                        <button
-                            onClick={handleLike}
-                            className="text-md font-light mb-4 rounded bg-[#222] px-4 py-2 flex items-center mr-3">
-                            <IoMdThumbsUp className="icon text-2xl mr-2" /> Gostei {video.likes}
-                        </button>
-                        <span className="text-md font-light mb-4 ml-2 flex items-center"><MdOutlineThumbDownAlt className="icon text-2xl mr-2" /> Não é pra mim</span>
-                        <span className="text-md font-bold mb-4 ml-4 flex items-center"><IoShareSocialOutline className="icon text-2xl mr-2" /> Compartilhar</span>
+                    <div className="flex flex-wrap items-center gap-x-2 text-xs sm:text-sm">
+                        <VideoLikeButton
+                            videoId={video.id}
+                            likes={video.likes}
+                            onLiked={async () => {
+                                try {
+                                    const response = await api.patch(`/video/${video.id}`, {
+                                        like: true,
+                                    })
+                                    setVideo(response.data)
+                                } catch (error) {
+                                    console.error('Erro ao curtir o vídeo:', error)
+                                }
+                            }}
+                        />
+                        <span className="flex items-center ml-2"><MdOutlineThumbDownAlt className="text-xl mr-1" /> Não é pra mim</span>
+                        <span className="font-bold flex items-center ml-2"><IoShareSocialOutline className="text-xl mr-1" /> Compartilhar</span>
+                        <span className="text-gray-400 opacity-70 mx-4 my-3">{video.views} visualizações</span>
                     </div>
-
                 </div>
+
 
                 <div className="mt-8">
                     <h1 className="text-2xl font-bold mb-4 opacity-70">Resumo</h1>
@@ -128,11 +139,12 @@ export default function VideoRelationPage() {
                 <div className="mt-8">
                     <h1 className="text-xl font-bold mb-4 opacity-70">Audio</h1>
                     <p className="mt-4 text-gray-300 flex items-center gap-2">
-                        <audio controls>
-                            <source src="https://www.exemplo.com/audio.mp3" type="audio/mpeg" width="100%" />
-                            Seu navegador não suporta o elemento de áudio.
-                        </audio>
-
+                        <AudioPlayer
+                            src="https://www.exemplo.com/audio.mp3"
+                            title="Sun Sets Alone"
+                            artist="aloneintokyo"
+                            cover="../imgs/img-audio.png"
+                        />
                     </p>
                 </div>
 
