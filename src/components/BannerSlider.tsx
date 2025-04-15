@@ -32,18 +32,17 @@ export default function BannerSlider({ videos }: { videos: Video[] }) {
     const router = useRouter()
 
     return (
-        <div className="w-full min-h-[600px] rounded-lg overflow-hidden mb-6">
+        <div className="relative w-full overflow-hidden">
             <Slider {...settings}>
                 {videos.map((video) => (
-                    <motion.div
-                        key={video.id}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 0.9 }}
-                        transition={{ duration: 0.5 }}
-                        className="relative w-full min-h-[600px]"
-                    >
-                        {/* Vídeo de fundo */}
-                        <div className="absolute inset-0 z-0 w-screen left-1/2 -translate-x-1/2">
+                    <div key={video.id} className="relative w-screen h-screen">
+                        {/* Slide com efeito opaco e animação */}
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 0.3 }}
+                            transition={{ duration: 0.5 }}
+                            className="absolute inset-0 z-0"
+                        >
                             <ReactPlayer
                                 url={video.hls_path}
                                 playing
@@ -53,22 +52,22 @@ export default function BannerSlider({ videos }: { videos: Video[] }) {
                                 height="100%"
                                 className="absolute top-0 left-0 w-full !h-full object-cover"
                             />
-                        </div>
+                        </motion.div>
 
-                        {/* Conteúdo por cima */}
-                        <div className="absolute top-4 left-4 z-10 text-white px-4 py-2 font-nunito w-[90%] md:w-[70%]">
-                            <p className="text-sm md:text-xl font-medium mt-6 md:mt-10">{video.category.title}</p>
-                            <p className="text-2xl md:text-5xl font-bold mt-4 md:mt-8">{video.title}</p>
-                            <p className="text-sm md:text-base mt-4 md:mt-8 font-light">{video.description}</p>
+                        {/* Conteúdo por cima, 100% visível */}
+                        <div className="absolute top-0 left-0 z-10 text-white px-8 py-12 w-full md:w-[70%] drop-shadow-xl">
+                            <p className="text-sm md:text-xl font-medium">{video.category.title}</p>
+                            <p className="text-2xl md:text-5xl font-bold mt-8">{video.title}</p>
+                            <p className="text-sm md:text-base mt-8 font-light">{video.description}</p>
 
                             <button
-                                className="startVideo mt-6 md:mt-12 w-full md:w-auto bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded transition"
+                                className="startVideo mt-6 md:mt-12 w-full md:w-auto text-white font-semibold py-2 px-6 rounded transition"
                                 onClick={() => router.push(`/video/${video.id}`)}
                             >
                                 ▶ Reproduzir agora
                             </button>
                         </div>
-                    </motion.div>
+                    </div>
                 ))}
             </Slider>
         </div>

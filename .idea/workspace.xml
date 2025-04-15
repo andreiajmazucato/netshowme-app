@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c6568241-fe49-44b5-b701-dc3c33c62113" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/video/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/video/[id]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BannerSkeleton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BannerSkeleton.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/BannerSlider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BannerSlider.tsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,7 +20,7 @@
         <entry file="file://$PROJECT_DIR$/src/app/home/page.tsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="72" selection-start-line="72" selection-end-line="77" selection-end-column="18" />
+              <caret line="72" column="2" selection-start-line="72" selection-start-column="2" selection-end-line="77" selection-end-column="18" />
               <folding>
                 <element signature="e#22#65#0" expanded="true" />
               </folding>
@@ -30,34 +31,19 @@
       <file leaf-file-name="BannerSkeleton.tsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/BannerSkeleton.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-              <folding>
-                <element signature="e#33#58#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="102">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BannerSlider.tsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BannerSlider.tsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/BannerSlider.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="45" column="70" selection-start-line="45" selection-start-column="70" selection-end-line="45" selection-end-column="70" />
+            <state relative-caret-position="257">
+              <caret line="66" column="47" selection-end-line="75" />
               <folding>
                 <element signature="e#14#46#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page.tsx" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/video/[id]/page.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="141" column="36" lean-forward="true" selection-start-line="141" selection-start-column="36" selection-end-line="141" selection-end-column="36" />
-              <folding>
-                <element signature="e#14#57#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -78,7 +64,7 @@
       <file leaf-file-name="AudioPlayer.tsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/AudioPlayer.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="748">
               <caret line="45" column="62" selection-start-line="45" selection-start-column="62" selection-end-line="45" selection-end-column="62" />
               <folding>
                 <element signature="e#14#54#0" expanded="true" />
@@ -107,6 +93,7 @@
       <find>FaSearch</find>
       <find>categoriesManual</find>
       <find>VideoCardRelation</find>
+      <find>&lt;div className=&quot;w-full min-h-[600px] rounded-lg overflow-hidden mb-6&quot;&gt;</find>
     </findStrings>
     <replaceStrings>
       <replace>category</replace>
@@ -137,7 +124,6 @@
         <option value="$PROJECT_DIR$/src/components/VideoCardRelation.tsx" />
         <option value="$PROJECT_DIR$/src/components/VideoCarouselRelation.tsx" />
         <option value="$PROJECT_DIR$/src/components/Footer.tsx" />
-        <option value="$PROJECT_DIR$/src/app/layout.tsx" />
         <option value="$PROJECT_DIR$/src/styles/video-gallery.scss" />
         <option value="$PROJECT_DIR$/src/components/Header.tsx" />
         <option value="$PROJECT_DIR$/src/app/home/page.tsx" />
@@ -151,9 +137,11 @@
         <option value="$PROJECT_DIR$/src/components/AudioPlayer.tsx" />
         <option value="$PROJECT_DIR$/src/components/Bannerteste.tsx" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/app/video/[id]/page.tsx" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/app/layout.tsx" />
         <option value="$PROJECT_DIR$/src/components/BannerSkeleton.tsx" />
         <option value="$PROJECT_DIR$/src/components/BannerSlider.tsx" />
-        <option value="$PROJECT_DIR$/src/app/video/[id]/page.tsx" />
       </list>
     </option>
   </component>
@@ -279,12 +267,13 @@
       <updated>1744636418027</updated>
       <workItem from="1744636422313" duration="11022000" />
       <workItem from="1744654665199" duration="23565000" />
-      <workItem from="1744718431815" duration="18666000" />
+      <workItem from="1744718431815" duration="18823000" />
+      <workItem from="1744745561207" duration="2726000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53253000" />
+    <option name="totallyTimeSpent" value="56136000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1908" y="7" width="1936" height="1048" extended-state="0" />
@@ -293,47 +282,47 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.37880495" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.38444194" />
       <window_info anchor="bottom" id="TypeScript" order="7" weight="0.32919955" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14498934" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14658849" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32919955" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32919955" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1433902" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" weight="0.32919955" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32919955" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.28410372" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32919955" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1433902" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,9 +365,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
           <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="e#14#51#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -434,16 +420,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/SkeletonLoader.ts" />
     <entry file="file://$PROJECT_DIR$/src/components/VideoCard.ts" />
     <entry file="file://$PROJECT_DIR$/src/components/VideoCarousel.ts" />
-    <entry file="file://$PROJECT_DIR$/src/tests/VideoCardTest.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-          <folding>
-            <element signature="e#28#83#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/VideoCardTest.ts" />
     <entry file="file://$PROJECT_DIR$/src/app/page.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -465,9 +442,6 @@
     <entry file="file://$PROJECT_DIR$/src/components/VideoCarousel.ts" />
     <entry file="file://$PROJECT_DIR$/src/styles/global.css" />
     <entry file="file://$PROJECT_DIR$/eslint.config.mjs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/postcss.config.mjs">
@@ -508,9 +482,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
           <caret line="45" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="e#14#51#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -518,16 +489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/layout.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -542,9 +503,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="402">
           <caret line="65" column="45" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="45" />
-          <folding>
-            <element signature="e#14#42#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -559,9 +517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
           <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -569,46 +524,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/VideoCardTest.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-          <folding>
-            <element signature="e#28#83#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/VideoLike.test.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/tests/VideoLike.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-          <folding>
-            <element signature="e#22#88#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/VideoCardTest.ts" />
+    <entry file="file://$PROJECT_DIR$/src/tests/VideoLike.test.ts" />
+    <entry file="file://$PROJECT_DIR$/src/components/tests/VideoLike.ts" />
     <entry file="file://$PROJECT_DIR$/src/components/__tests__/VideoLikeButton.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-          <folding>
-            <element signature="e#39#105#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -621,7 +546,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/AudioPlayer.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="748">
           <caret line="45" column="62" selection-start-line="45" selection-start-column="62" selection-end-line="45" selection-end-column="62" />
           <folding>
             <element signature="e#14#54#0" expanded="true" />
@@ -629,13 +554,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Bannerteste.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Bannerteste.tsx" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -646,10 +565,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/layout.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="41" lean-forward="true" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/video/[id]/page.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="730">
+          <caret line="151" column="53" selection-start-line="151" selection-start-column="53" selection-end-line="151" selection-end-column="53" />
+          <folding>
+            <element signature="e#14#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/home/page.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="72" selection-start-line="72" selection-end-line="77" selection-end-column="18" />
+          <caret line="72" column="2" selection-start-line="72" selection-start-column="2" selection-end-line="77" selection-end-column="18" />
           <folding>
             <element signature="e#22#65#0" expanded="true" />
           </folding>
@@ -658,30 +604,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/BannerSkeleton.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding>
-            <element signature="e#33#58#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/BannerSlider.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="45" column="70" selection-start-line="45" selection-start-column="70" selection-end-line="45" selection-end-column="70" />
+        <state relative-caret-position="257">
+          <caret line="66" column="47" selection-end-line="75" />
           <folding>
             <element signature="e#14#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/video/[id]/page.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="141" column="36" lean-forward="true" selection-start-line="141" selection-start-column="36" selection-end-line="141" selection-end-column="36" />
-          <folding>
-            <element signature="e#14#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
