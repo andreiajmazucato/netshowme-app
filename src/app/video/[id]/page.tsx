@@ -1,103 +1,155 @@
-import Image from "next/image";
+'use client'
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+import { useEffect, useState } from 'react'
+import { FaCloudDownloadAlt } from 'react-icons/fa'
+import { MdOutlineBookmarkAdd, MdOutlineThumbDownAlt,  } from "react-icons/md";
+import { IoMdThumbsUp } from "react-icons/io";
+import { IoShareSocialOutline } from "react-icons/io5";
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+import '../../../styles/video-gallery.scss'
+import { useParams } from 'next/navigation'
+import api from '@/utils/api'
+import VideoPlayer from '@/components/VideoPlayer'
+import VideoCarouselRelation from '@/components/VideoCarouselRelation';
+import { format } from 'date-fns'
+
+export default function VideoRelationPage() {
+    const { id } = useParams()
+    const [videos, setVideos] = useState<Video[]>([])
+    const [video, setVideo] = useState<any>(null)
+
+    useEffect(() => {
+        if (id) {
+            api.get(`/video/${id}`)
+                .then(res => setVideo(res.data))
+                .catch(err => console.error(err))
+
+            // Marca a view (não like)
+            api.patch(`/video/${id}`, {
+                like: false,
+            }).catch(err => console.error('Erro ao registrar visualização:', err))
+        }
+
+        api.get('/videos')
+            .then((response) => setVideos(response.data))
+
+    }, [id])
+
+
+    const handleLike = async () => {
+        try {
+            const response = await api.patch(`/video/${id}`, {
+                like: true,
+            })
+            setVideo(response.data) // Atualiza o estado do vídeo com os novos likes
+        } catch (error) {
+            console.error('Erro ao curtir o vídeo:', error)
+        }
+    }
+
+    const categoriesManual = [
+        'Conteúdos relacionados',
+    ]
+
+    const videosByCategory = videos.reduce<Record<string, Video[]>>((acc, video) => {
+        const category = video.category.title
+        if (!acc[category]) {
+            acc[category] = []
+        }
+        acc[category].push(video)
+        return acc
+    }, {})
+
+    function getRandomVideos(videos: Video[], count: number): Video[] {
+        const shuffled = [...videos].sort(() => 0.5 - Math.random())
+        return shuffled.slice(0, count)
+    }
+
+    if (!video) return <p></p>
+
+    return (
+        <div className="video-gallery">
+
+            <div className="bg-black">
+                <div className="p-6 text-white max-w-5xl mx-auto">
+                    <VideoPlayer url={video.hls_path} />
+                </div>
+            </div>
+
+            <div className="w-[80%] mt-8 mx-auto">
+                <div >
+                    <h1 className="text-2xl font-bold mb-4">{video.title}</h1>
+                </div>
+
+                <div className="flex items-center justify-between px-4">
+                    <div className="flex items-center gap-2">
+                        <span className="text-sm font-light text-gray-300 mb-4 px-4 rounded-full bg-[#222] p-2">{video.category.title}</span>
+                        <span className="text-md font-light text-gray-300 mb-4 ml-2">{format(new Date(video.created_at), 'dd/MM/yyyy')}</span>
+                        <span className="text-md font-semibold mb-4 ml-4 flex items-center"><MdOutlineBookmarkAdd className="icon text-2xl mr-2" />Adicionar a minha lista</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <span className="text-sm font-light text-gray-400 mb-4 mr-4 opacity-70">{video.views} visualizações</span>
+                        <button
+                            onClick={handleLike}
+                            className="text-md font-light mb-4 rounded bg-[#222] px-4 py-2 flex items-center mr-3">
+                            <IoMdThumbsUp className="icon text-2xl mr-2" /> Gostei {video.likes}
+                        </button>
+                        <span className="text-md font-light mb-4 ml-2 flex items-center"><MdOutlineThumbDownAlt className="icon text-2xl mr-2" /> Não é pra mim</span>
+                        <span className="text-md font-bold mb-4 ml-4 flex items-center"><IoShareSocialOutline className="icon text-2xl mr-2" /> Compartilhar</span>
+                    </div>
+
+                </div>
+
+                <div className="mt-8">
+                    <h1 className="text-2xl font-bold mb-4 opacity-70">Resumo</h1>
+                    <p className="mt-4 text-gray-400">{video.description}</p>
+                </div>
+
+                <div className="mt-8">
+                    <h1 className="text-2xl font-bold mb-4 opacity-60">Como fazer upload</h1>
+                    <p className="mt-4 text-gray-400">Ao acessar, selecione no menu superior a opção Gerenciar vídeos, em seguida Criar vídeo. Para começar o processo de upload, selecione a opção Carregar vídeo. Ao abrir a janela de busca, localize o arquivo e o selecione.</p>
+                </div>
+
+                <div className="mt-8">
+                    <h1 className="text-xl font-bold mb-4 opacity-70">Arquivos complementares</h1>
+                    <div className="mt-4 space-y-2">
+                        <p className="block w-fit text-gray-400 flex items-center rounded border border-gray-600 px-3 py-2 gap-2">
+                            arquivo-do-curso-aula-3.pdf
+                            <FaCloudDownloadAlt className="text-xl" />
+                        </p>
+
+                        <p className="block w-fit text-gray-400 flex items-center rounded border border-gray-600 px-3 py-2 gap-2 mt-4">
+                            Prototipinho top.pdf
+                            <FaCloudDownloadAlt className="text-xl" />
+                        </p>
+                    </div>
+                </div>
+
+                <div className="mt-8">
+                    <h1 className="text-xl font-bold mb-4 opacity-70">Audio</h1>
+                    <p className="mt-4 text-gray-300 flex items-center gap-2">
+                        <audio controls>
+                            <source src="https://www.exemplo.com/audio.mp3" type="audio/mpeg" width="100%" />
+                            Seu navegador não suporta o elemento de áudio.
+                        </audio>
+
+                    </p>
+                </div>
+
+                {/* CARROUSEL */}
+                {categoriesManual.map((category) => {
+                    const videosCategory = getRandomVideos(videos, 6)
+
+                    return (
+                        <VideoCarouselRelation
+                            key={category}
+                            categoryTitle={category}
+                            videos={videosCategory}
+                        />
+                    )
+                })}
+
+            </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    )
 }

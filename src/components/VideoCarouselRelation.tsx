@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useRef } from 'react'
-import VideoCard from './VideoCard'
+import VideoCardRelation from './VideoCardRelation'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 
 interface Video {
@@ -15,7 +15,7 @@ interface VideoCarouselProps {
     videos: Video[]
 }
 
-const VideoCarousel: React.FC<VideoCarouselProps> = ({ categoryTitle, videos }) => {
+const VideoCarouselRelation: React.FC<VideoCarouselProps> = ({ categoryTitle, videos }) => {
     const scrollRef = useRef<HTMLDivElement>(null)
 
     const scroll = (direction: 'left' | 'right') => {
@@ -50,7 +50,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({ categoryTitle, videos }) 
                 className="flex overflow-x-auto scrollbar-hide space-x-4 px-4"
             >
                 {videos.map((video, index) => (
-                    <VideoCard key={video.id}
+                    <VideoCardRelation key={video.id}
                                video={video}
                                categoryTitle={categoryTitle}
                                index={index}
@@ -61,4 +61,4 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({ categoryTitle, videos }) 
     )
 }
 
-export default VideoCarousel
+export default VideoCarouselRelation

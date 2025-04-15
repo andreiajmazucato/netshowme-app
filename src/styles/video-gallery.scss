@@ -1,10 +1,172 @@
+/* Oculta scroll horizontal no Chrome, Safari, Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE e Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari e Opera */
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #131313;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #333;
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+  }
+
+  .menu ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      position: relative;
+      cursor: pointer;
+      color: white;
+      transition: color 0.2s;
+      padding: 0 20px;
+
+      &:hover {
+        color: #ccc;
+      }
+
+      &.has-submenu:hover .submenu {
+        display: block;
+      }
+
+
+      .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #1e1e1e;
+        border: 1px solid #333;
+        border-radius: 4px;
+        padding: 0.5rem 0;
+        min-width: 150px;
+        z-index: 10;
+
+        li {
+          padding: 0.5rem 1rem;
+          white-space: nowrap;
+
+          &:hover {
+            background-color: #2a2a2a;
+          }
+        }
+      }
+    }
+  }
+
+  .dropdown-icon {
+    font-size: 0.75rem;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .top-actions {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+
+    .icon {
+      font-size: 1.2rem;
+      color: white;
+      cursor: pointer;
+      transition: color 0.2s;
+
+      &:hover {
+        color: #ccc;
+      }
+
+      &.user {
+        font-size: 2.6rem;
+        color: #ddd;
+        background-color: #444;
+        border-radius: 50%;
+        padding: 0.1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .menu {
+      width: 100%;
+      display: none;
+
+      ul {
+        flex-direction: column;
+        gap: 0;
+        background-color: #1e1e1e;
+        border-top: 1px solid #333;
+        padding: 1rem 0;
+
+        li {
+          padding: 0.75rem 2rem;
+          border-bottom: 1px solid #333;
+
+          .submenu {
+            position: static;
+            background: transparent;
+            border: none;
+            padding: 0;
+            display: block;
+
+            li {
+              padding: 0.5rem 2.5rem;
+              background-color: #2a2a2a;
+            }
+          }
+        }
+      }
+    }
+
+    .menu.active {
+      display: block;
+    }
+
+    .hamburger {
+      display: block;
+      font-size: 1.8rem;
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  .menu ul li.has-submenu .submenu {
+    display: none;
+  }
+
+  .menu ul li.has-submenu.open .submenu {
+    display: block;
+  }
+}
+
+
+
+
 .video-gallery {
   background-color: #131313;
   color: #ffffff;
   min-height: 100vh;
   padding: 2rem;
 
-  .title {
+  .video-title {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 2rem;
@@ -43,4 +205,140 @@
       color: #cccccc;
     }
   }
+}
+
+.live {
+  background-color: #F44336;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: lighter;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.notLive {
+  background-color: #666666;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: lighter;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+}
+
+
+.startVideo {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 9px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: lighter;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+.font-nunito {
+  font-family: 'Nunito', sans-serif;
+}
+
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: #ccc;
+  font-size: 0.875rem;
+  border-top: 1px solid #333;
+  background-color: #131313;
+  flex-wrap: wrap;
+
+  .footer-left,
+  .footer-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .footer-left {
+    flex-wrap: wrap;
+  }
+
+  .footer-link {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .copyright {
+    font-weight: bold;
+  }
+
+  .beta-button {
+    background-color: #EE3965;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    padding: 0.1rem 0.4rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: #EE3965;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+
+    .footer-left,
+    .footer-right {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+}
+
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+
+.slick-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: auto;
+  z-index: 10;
+  display: flex !important;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: white !important;
+  opacity: 0.5;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
 }

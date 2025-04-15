@@ -1,8 +1,8 @@
-// components/SkeletonLoader.tsx
+// components/BannerSkeleton.tsx
 import React from 'react'
 import ContentLoader from 'react-content-loader'
 
-const SkeletonLoader: React.FC = () => (
+const BannerSkeleton: React.FC = () => (
     <div className="w-full h-[300px] bg-[#222] rounded-lg mb-6 overflow-hidden">
         <ContentLoader
             speed={2}
@@ -17,4 +17,4 @@ const SkeletonLoader: React.FC = () => (
     </div>
 )
 
-export default SkeletonLoader
+export default BannerSkeleton

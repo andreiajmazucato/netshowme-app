@@ -1,54 +1,18 @@
-// src/components/Header.tsx
+// src/components/Footer.tsx
 'use client'
 
-import { FaChevronDown, FaSearch, FaUserCircle } from 'react-icons/fa'
-
-export default function Header() {
+export default function Footer() {
     return (
-        <header className="top-bar">
-            <div className="logo">
-                <img
-                    width="159"
-                    height="25"
-                    src="https://netshow.me/wp-content/uploads/2023/11/logo-padd.svg"
-                    alt="Netshow.me"
-                />
+        <footer className="footer">
+            <div className="footer-left">
+                <span className="copyright">© Flow</span>
+                <a href="#" className="footer-link">Política de Privacidade</a>
+                <a href="#" className="footer-link">Termo de Uso</a>
             </div>
-
-            <nav className="menu">
-                <ul>
-                    <li className="has-submenu">
-                        Categorias <FaChevronDown className="dropdown-icon" />
-                        <ul className="submenu">
-                            <li><a href="#">category 1</a></li>
-                            <li><a href="#">category 2</a></li>
-                            <li><a href="#">category 3</a></li>
-                        </ul>
-                    </li>
-                    <li className="has-submenu">Assuntos <FaChevronDown className="dropdown-icon" />
-                        <ul className="submenu">
-                            <li><a href="#">Assunto 1</a></li>
-                            <li><a href="#">Assunto 2</a></li>
-                            <li><a href="#">Assunto 3</a></li>
-                        </ul>
-                    </li>
-                    <li className="has-submenu">Outras Páginas <FaChevronDown className="dropdown-icon" />
-                        <ul className="submenu">
-                            <li><a href="#">Página 1</a></li>
-                            <li><a href="#">Página 2</a></li>
-                            <li><a href="#">Página 3</a></li>
-                        </ul>
-                    </li>
-                    <li>Minha Lista</li>
-                    <li>Lives</li>
-                    <li>Fórum</li>
-                </ul>
-            </nav>
-
-            <div className="top-actions">
-                <FaSearch className="icon" />
-                <FaUserCircle className="icon user" />
+            <div className="footer-right">
+                Desenvolvido por <a href="https://netshow.me" className="footer-link" target="_blank">Netshow.me</a>
+                <button className="beta-button ml-2">BETA</button>
             </div>
-        </header>
+        </footer>
     )
 }

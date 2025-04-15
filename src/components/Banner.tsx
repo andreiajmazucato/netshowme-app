@@ -1,20 +1,40 @@
-// components/SkeletonLoader.tsx
+// components/Banner.tsx
+'use client'
+
+import { motion } from 'framer-motion'
 import React from 'react'
-import ContentLoader from 'react-content-loader'
 
-const SkeletonLoader: React.FC = () => (
-    <div className="w-full h-[300px] bg-[#222] rounded-lg mb-6 overflow-hidden">
-        <ContentLoader
-            speed={2}
-            width="100%"
-            height={300}
-            backgroundColor="#333"
-            foregroundColor="#444"
-            viewBox="0 0 1000 300"
+const Banner: React.FC<{ video: {
+            thumbnail: string;
+            title: string;
+            category: {
+                id: number
+                title: string
+            }
+        }
+    }> = ({ video }) => {
+
+    return (
+        <motion.div
+            className="w-full h-[600px] relative rounded-lg overflow-hidden mb-6"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
         >
-            <rect x="0" y="0" rx="10" ry="10" width="1000" height="300" />
-        </ContentLoader>
-    </div>
-)
+            <img
+                src={video.thumbnail}
+                alt={video.title}
+                className="w-full h-full object-cover"
+            />
+            <div className="text-white text-2xl font-semibold ">
+                {video.category.title}
+            </div>
 
-export default SkeletonLoader
+            <div className="left-4 text-white text-2xl font-semibold bg-black/50 px-4 py-2 rounded">
+                {video.title}
+            </div>
+        </motion.div>
+    )
+}
+
+export default Banner

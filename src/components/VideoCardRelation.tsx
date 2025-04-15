@@ -27,14 +27,10 @@ interface VideoCardProps {
 
 // Mapeia categoria para ícone
 const iconByCategory: Record<string, JSX.Element> = {
-    'Ao Vivo': <MdLiveTv size={24} />,
-    'Minha Lista': <MdLibraryAdd size={24} />,
-    'Playlists': <MdPlaylistPlay size={24} />,
-    'Continuar reprodução': <MdOutlinePlayArrow size={24} />,
-    'Flow Experience 2025': <MdOutlinePlayArrow size={24} />,
+    'Conteúdos relacionados': <MdOutlinePlayArrow size={24} />,
 }
 
-const VideoCard: React.FC<VideoCardProps> = ({ video, categoryTitle, index }) => {
+const VideoCardRelation: React.FC<VideoCardProps> = ({ video, categoryTitle, index }) => {
     const icon = iconByCategory[categoryTitle] || <MdOutlinePlayArrow size={24} />
 
     const router = useRouter()
@@ -79,4 +75,4 @@ const VideoCard: React.FC<VideoCardProps> = ({ video, categoryTitle, index }) =>
     )
 }
 
-export default VideoCard
+export default VideoCardRelation
