@@ -90,6 +90,8 @@ export default function VideoRelationPage() {
                         <span className="font-semibold flex items-center text-xl ml-3 font-nunito"><MdOutlineBookmarkAdd className="text-2xl mr-1" />Adicionar a minha lista</span>
                     </div>
                     <div className="flex flex-wrap items-center gap-x-2 text-xs sm:text-sm">
+                        {/*<span className="text-gray-400 opacity-70 mx-4 my-3">{video.views} visualizações</span>*/}
+
                         <VideoLikeButton
                             videoId={video.id}
                             likes={video.likes}
@@ -106,7 +108,6 @@ export default function VideoRelationPage() {
                         />
                         <span className="flex items-center ml-2"><MdOutlineThumbDownAlt className="text-xl mr-1" /> Não é pra mim</span>
                         <span className="font-bold flex items-center ml-2"><IoShareSocialOutline className="text-xl mr-1" /> Compartilhar</span>
-                        <span className="text-gray-400 opacity-70 mx-4 my-3">{video.views} visualizações</span>
                     </div>
                 </div>
 
