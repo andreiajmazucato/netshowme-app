@@ -106,7 +106,7 @@ export default function VideoRelationPage() {
                         />
                         <span className="flex items-center ml-2"><MdOutlineThumbDownAlt className="text-xl mr-1" /> Não é pra mim</span>
                         <span className="font-bold flex items-center ml-2"><IoShareSocialOutline className="text-xl mr-1" /> Compartilhar</span>
-                        {/*<span className="text-gray-400 opacity-70 mx-4 my-3">{video.views} visualizações</span>*/}
+                        <span className="text-gray-400 opacity-70 mx-4 my-3">{video.views} visualizações</span>
                     </div>
                 </div>
 
@@ -143,7 +143,7 @@ export default function VideoRelationPage() {
                             src="https://www.exemplo.com/audio.mp3"
                             title="Sun Sets Alone"
                             artist="aloneintokyo"
-                            cover="../imgs/img-audio.png"
+                            cover="http://localhost:3000/imgs/img-audio.png"
                         />
                     </p>
                 </div>

@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c6568241-fe49-44b5-b701-dc3c33c62113" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Banner.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BannerSkeleton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BannerSkeleton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/video/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/video/[id]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/BannerSlider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BannerSlider.tsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,8 +30,8 @@
       <file leaf-file-name="BannerSkeleton.tsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/BannerSkeleton.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="28" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="28" />
+            <state relative-caret-position="153">
+              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
               <folding>
                 <element signature="e#33#58#0" expanded="true" />
               </folding>
@@ -41,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BannerSlider.tsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BannerSlider.tsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/BannerSlider.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="55" column="60" selection-start-line="55" selection-start-column="60" selection-end-line="55" selection-end-column="60" />
+            <state relative-caret-position="170">
+              <caret line="45" column="70" selection-start-line="45" selection-start-column="70" selection-end-line="45" selection-end-column="70" />
               <folding>
                 <element signature="e#14#46#0" expanded="true" />
               </folding>
@@ -53,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page.tsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="page.tsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/video/[id]/page.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="95" column="18" selection-start-line="95" selection-start-column="18" selection-end-line="95" selection-end-column="18" />
+            <state relative-caret-position="209">
+              <caret line="141" column="36" lean-forward="true" selection-start-line="141" selection-start-column="36" selection-end-line="141" selection-end-column="36" />
               <folding>
                 <element signature="e#14#57#0" expanded="true" />
               </folding>
@@ -151,11 +149,11 @@
         <option value="$PROJECT_DIR$/src/components/VideoLikeButton.tsx" />
         <option value="$PROJECT_DIR$/src/components/__tests__/VideoLike.tsx" />
         <option value="$PROJECT_DIR$/src/components/AudioPlayer.tsx" />
-        <option value="$PROJECT_DIR$/src/app/video/[id]/page.tsx" />
         <option value="$PROJECT_DIR$/src/components/Bannerteste.tsx" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/components/BannerSkeleton.tsx" />
         <option value="$PROJECT_DIR$/src/components/BannerSlider.tsx" />
+        <option value="$PROJECT_DIR$/src/app/video/[id]/page.tsx" />
       </list>
     </option>
   </component>
@@ -281,12 +279,12 @@
       <updated>1744636418027</updated>
       <workItem from="1744636422313" duration="11022000" />
       <workItem from="1744654665199" duration="23565000" />
-      <workItem from="1744718431815" duration="17903000" />
+      <workItem from="1744718431815" duration="18666000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52490000" />
+    <option name="totallyTimeSpent" value="53253000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1908" y="7" width="1936" height="1048" extended-state="0" />
@@ -631,16 +629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/video/[id]/page.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="95" column="18" selection-start-line="95" selection-start-column="18" selection-end-line="95" selection-end-column="18" />
-          <folding>
-            <element signature="e#14#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Bannerteste.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -670,8 +658,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/BannerSkeleton.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="28" />
+        <state relative-caret-position="153">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
           <folding>
             <element signature="e#33#58#0" expanded="true" />
           </folding>
@@ -680,10 +668,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/BannerSlider.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="55" column="60" selection-start-line="55" selection-start-column="60" selection-end-line="55" selection-end-column="60" />
+        <state relative-caret-position="170">
+          <caret line="45" column="70" selection-start-line="45" selection-start-column="70" selection-end-line="45" selection-end-column="70" />
           <folding>
             <element signature="e#14#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/video/[id]/page.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="141" column="36" lean-forward="true" selection-start-line="141" selection-start-column="36" selection-end-line="141" selection-end-column="36" />
+          <folding>
+            <element signature="e#14#57#0" expanded="true" />
           </folding>
         </state>
       </provider>

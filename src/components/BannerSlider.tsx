@@ -43,7 +43,7 @@ export default function BannerSlider({ videos }: { videos: Video[] }) {
                         className="relative w-full min-h-[600px]"
                     >
                         {/* Vídeo de fundo */}
-                        <div className="absolute inset-0 z-0 w-screen w-full left-1/2 -translate-x-1/2">
+                        <div className="absolute inset-0 z-0 w-screen left-1/2 -translate-x-1/2">
                             <ReactPlayer
                                 url={video.hls_path}
                                 playing
@@ -51,7 +51,7 @@ export default function BannerSlider({ videos }: { videos: Video[] }) {
                                 loop
                                 width="100%"
                                 height="100%"
-                                className="!absolute !top-0 !left-0 !w-full !h-full !object-cover"
+                                className="absolute top-0 left-0 w-full !h-full object-cover"
                             />
                         </div>
 
