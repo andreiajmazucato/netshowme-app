@@ -1,8 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Netshow.me - Página Videos
 
-## Netshowme Page
-
-Uma aplicação de vídeo interativo desenvolvida com Next.js + React que permite visualizar um vídeo, registrar visualizações e likes, acessar conteúdo relacionado e baixar materiais complementares.
+Uma aplicação front-end de vídeo interativo desenvolvida com React + Next.js que permite visualizar um vídeo, registrar visualizações e likes, acessar conteúdo relacionado e baixar materiais complementares.
 
 
 ### Objetivo
@@ -61,6 +59,10 @@ npm install
 npm run dev
 
 ```
+Para acessar a aplicação rodando, abra a URL:
+
+- http://localhost:3000/
+
 
 ### Estrutura Básica
 

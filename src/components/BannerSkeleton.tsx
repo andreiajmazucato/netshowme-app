@@ -3,11 +3,11 @@ import React from 'react'
 import ContentLoader from 'react-content-loader'
 
 const BannerSkeleton: React.FC = () => (
-    <div className="w-full h-[300px] bg-[#222] rounded-lg mb-6 overflow-hidden">
+    <div className="w-screen min-h-[600px] overflow-hidden bg-[#222] rounded-lg mb-6">
         <ContentLoader
             speed={2}
             width="100%"
-            height={300}
+            height={500}
             backgroundColor="#333"
             foregroundColor="#444"
             viewBox="0 0 1000 300"
